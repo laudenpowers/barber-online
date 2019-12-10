@@ -158,6 +158,8 @@ td, th {
 	font-size: 2em;
 	margin: 0 0 1em;
 	clear: left;
+	/*color: rgba(0, 0, 0, 0.3); Opacidade em cores de elementos*/
+	/*text-shadow: 2px 2px #FF0000; Sombra aplicada em textos*/
 }
 
 .titulo-principal:first-letter {
@@ -250,9 +252,55 @@ p:first-line {
 
 .img-beneficios {
 	width: 60%;
-}	
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.img-beneficios:hover {
+	opacity: 0.3;
+}
 
 .video {
 	width: 560px;
 	margin: 2em auto;	
 }
+
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+	
+	h1 {
+		text-align: center;		
+	}
+	
+	nav {
+		position: static;
+	}
+	
+	.lista-beneficios, .img-beneficios {
+		width: 100%;
+	}
+}
+
+/*
+//Seleciona os filhos dentro do elemento main
+main > p {
+	
+}
+
+//Seleciona o primeiro irmão p do elemento img
+img + p {
+	
+}
+
+//Seleciona todos os seletores irmãos p depois do elemento img
+img ~ p {
+	
+}
+//Seleciona todos os elementos p que não possuem o id #missao
+.principal p:not(#missao) {
+	
+}
+*/
